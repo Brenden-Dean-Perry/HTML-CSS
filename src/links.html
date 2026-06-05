@@ -1,0 +1,238 @@
+<!DOCTYPE HTML> <!--Declares the document type and version of HTML -->
+<html lang="en"> <!--Declares the language of the HTML document and established the root element. -->
+
+<head>
+    <meta charset="UTF-8"> <!--Declares the character encoding for the HTML document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a HTML demo project to showcase basic HTML structure and styling.">
+    <link rel="icon" href="logo.png" type="image/x-icon"> <!--Links an icon to be displayed in the browser tab -->
+    <link rel="stylesheet" href="main.css"> <!--Linking an external CSS file to style the HTML document. -->
+    <title>HTML Demo Project</title> <!--Sets the title of the HTML document, which appears in the browser tab. -->
+</head>
+
+<body>
+    <h1>Links (&lt;a&gt;)</h1>
+    <p>Links are created using the <code>&lt;a&gt;</code> tag. The <code>href</code> attribute specifies the URL of the page the link goes to.</p>
+    
+    <hr />
+
+    <h2>Absolute Links (References)</h2>
+    <p>Absolute (external) links specify the full URL of the page including external websites.</p>
+    <p><a href="https://www.example.com" target="_blank">Visit Example Website</a></p>
+
+    <hr />
+
+    <h2>Relative Links (References)</h2>
+    <p>Relative (internal) links specify a path relative to the current page:</p>
+    <p><a href="index.html">Go back to Home Page</a></p>
+    
+    <hr />
+
+    <h2>Section Linking</h2>
+    <p><a href="text.html">Text Elements</a></p>
+    <nav>
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+        </ul>
+
+    </nav>
+
+    <hr />
+
+    <h2>Download Link</h2>
+    <p>You can download the example file by clicking the link below. It adds a download attribute to the anchor tag, which prompts the browser to download the file instead of navigating to it.
+        <br />
+        Note: downloads may not work in all browsers some may simply navigate to the file instead of downloading it.
+        <br />
+        You may also specify a different filename for the downloaded file by using the <code>download=new_file_name.ext</code> attribute with a value.
+    </p>
+    <p><a href="assets/example.png" download="renamed_example.png">Download Example Image</a></p>
+    
+    <hr />
+
+    <h2>Email Link</h2>
+    <p>You can create an email link using the <code>mailto:</code> scheme in the <code>href</code> attribute.</p>
+    <p>Note in practice, this is not advisable for public websites due to spam risks as crawlers can easily harvest email addresses.</p>
+    <p><a href="mailto:example@example.com">Send an Email</a></p>
+
+    <hr />
+    <h2>Phone number Link</h2>
+    <p> You can create a phone number link using the <code>tel:</code> scheme in the <code>href</code> attribute.</p>
+    <p>Note in practice, this is not advisable for public websites due to spam risks as crawlers can easily harvest phone numbers.</p>
+    <p><a href="tel:+1234567890">Call Us</a></p>
+
+    <hr />
+
+    <h2>Example data under sections:</h2>
+
+    <section id="section1">
+        <h3>Section 1:</h3>
+        <p>
+            Fill in the content for section 1 here. This is an example of a section element that can be used to group related content together.
+            Ok lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            <br />
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <br />
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            <br />
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <br />
+            Mauris in aliquam sem fringilla ut morbi tincidunt augue. 
+            <br />
+            Nunc sed id semper risus in hendrerit gravida rutrum. 
+            <br />
+            Eget felis eget nunc lobortis mattis aliquam faucibus purus. 
+            <br />
+            Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. 
+            <br />
+            Nisi est sit amet facilisis magna etiam tempor orci eu.
+            <br />
+            Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. 
+            <br />
+            Eget duis at tellus at urna condimentum mattis pellentesque id. 
+            <br />
+            Nunc sed blandit libero volutpat sed cras ornare arcu dui. 
+            <br />
+            Donec et odio pellentesque diam volutpat commodo sed egestas egestas.
+            <br />
+            Donec et odio pellentesque diam volutpat commodo sed egestas egestas.
+            <br />
+            Donec et odio pellentesque diam volutpat commodo sed egestas egestas. 
+            <br />
+            Donec et odio pellentesque diam volutpat commodo sed egestas egestas
+            <br />
+            Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+            <br />
+            Donec et odio pellentesque diam volutpat commodo sed egestas egestas. 
+            <br />
+            Donec et odio pellentesque diam volutpat commodo sed egestas egestas. 
+            <br />
+            Donec et odio pellentesque diam volutpat commodo sed egestas egestas.
+            <br />
+            Wisi enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <br />
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            <br />
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            
+        </p>
+    </section>
+
+    <section id="section2">
+        <h3>Section 2:</h3>
+        <p>
+            This is an example of a section element that can be used to group related content together.
+            Ok lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        <br />
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        <br />
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <br />
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        <br />
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <br />
+        Mauris in aliquam sem fringilla ut morbi tincidunt augue. 
+        <br />
+        Nunc sed id semper risus in hendrerit gravida rutrum. 
+        <br />
+        Eget felis eget nunc lobortis mattis aliquam faucibus purus. 
+        <br />
+        Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. 
+        <br />
+        Nisi est sit amet facilisis magna etiam tempor orci eu.
+        <br />
+        Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. 
+        <br />
+        Eget duis at tellus at urna condimentum mattis pellentesque id. 
+        <br />
+        Nunc sed blandit libero volutpat sed cras ornare arcu dui. 
+        <br />
+        Donec et odio pellentesque diam volutpat commodo sed egestas egestas.
+        <br />
+        Donec et odio pellentesque diam volutpat commodo sed egestas egestas.
+        <br />
+        Donec et odio pellentesque diam volutpat commodo sed egestas egestas. 
+        <br />
+        Donec et odio pellentesque diam volutpat commodo sed egestas egestas
+        <br />
+        Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+        <br />
+        Donec et odio pellentesque diam volutpat commodo sed egestas egestas. 
+        <br />
+        Donec et odio pellentesque diam volutpat commodo sed egestas egestas. 
+        <br />
+        Donec et odio pellentesque diam volutpat commodo sed egestas egestas.
+        <br />
+        Wisi enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        <br />
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        <br />
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            
+        </p>
+    </section>
+
+    <section id="section3">
+        <h3>Section 3:</h3>
+        <p>
+            Fill in the content for section 3 here. This is an example of a section element that can be used to group related content together.
+            Ok lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        <br />
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        <br />
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <br />
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        <br />
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <br />
+        Mauris in aliquam sem fringilla ut morbi tincidunt augue. 
+        <br />
+        Nunc sed id semper risus in hendrerit gravida rutrum. 
+        <br />
+        Eget felis eget nunc lobortis mattis aliquam faucibus purus. 
+        <br />
+        Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. 
+        <br />
+        Nisi est sit amet facilisis magna etiam tempor orci eu.
+        <br />
+        Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. 
+        <br />
+        Eget duis at tellus at urna condimentum mattis pellentesque id. 
+        <br />
+        Nunc sed blandit libero volutpat sed cras ornare arcu dui. 
+        <br />
+        Donec et odio pellentesque diam volutpat commodo sed egestas egestas.
+        <br />
+        Donec et odio pellentesque diam volutpat commodo sed egestas egestas.
+        <br />
+        Donec et odio pellentesque diam volutpat commodo sed egestas egestas. 
+        <br />
+        Donec et odio pellentesque diam volutpat commodo sed egestas egestas
+        <br />
+        Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+        <br />
+        Donec et odio pellentesque diam volutpat commodo sed egestas egestas. 
+        <br />
+        Donec et odio pellentesque diam volutpat commodo sed egestas egestas. 
+        <br />
+        Donec et odio pellentesque diam volutpat commodo sed egestas egestas.
+        <br />
+        Wisi enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        <br />
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        <br />
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            
+        </p>
+    </section>
+
+    <a href="#">Back to Top</a>
+
+</body>
+</html>

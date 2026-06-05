@@ -1,0 +1,46 @@
+<!DOCTYPE HTML> <!--Declares the document type and version of HTML -->
+<html lang="en"> <!--Declares the language of the HTML document and established the root element. -->
+
+<head>
+    <meta charset="UTF-8"> <!--Declares the character encoding for the HTML document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a HTML demo project to showcase basic HTML structure and styling.">
+    <link rel="icon" href="img/example.png" type="image/x-icon"> <!--Links an icon to be displayed in the browser tab -->
+    <link rel="stylesheet" href="main.css"> <!--Linking an external CSS file to style the HTML document. -->
+    <title>Images</title> <!--Sets the title of the HTML document, which appears in the browser tab. -->
+</head>
+
+<body>
+    <h1>Image Elements (&lt;img&gt;)</h1>
+    <p>The &lt;img&gt; element is used to embed images in an HTML document. It is a self-closing tag and requires the 'src' attribute to specify the image source and the 'alt' attribute to provide alternative text for accessibility.</p>
+    
+    <hr />
+
+    <h2>Example of an Image Element</h2>
+    <p>Below is an example of how to use the &lt;img&gt; element:</p>
+    <img src="img/balance.jpg" alt="Balance Image" width="300" height="200" title="Balance Image Tooltip example" loading="lazy"> 
+    <!--alt attribute provides alternative text for the image, which is important for accessibility and SEO.-->
+    <!--width and height attributes specify the dimensions of the image are optional but recommended nowaways to ensure proper layout and performance. Enables cumulative layout shift (CLS)-->
+    <p>
+        In this example, the image is sourced from "img/balance.jpg", and it has an alternative text of "Balance Image". 
+        The width and height attributes specify the dimensions of the image. 
+        The title attribute provides additional information about the image, which is displayed as a tooltip when the user hovers over the image. 
+        The alt attribute is crucial for accessibility, as it allows screen readers to describe the image to visually impaired users. 
+        Additionally, it serves as a fallback if the image fails to load, ensuring that users still understand the content of the page. 
+        Including the width and height attributes helps to prevent layout shifts as the page loads, improving the user experience.
+    </p>
+
+    <hr />
+
+    <h2>Loading Attribute</h2>
+    <p>
+        Loading attribute with loading="lazy" value is used to defer the loading of the image until it is about to enter the viewport, which can improve page load performance, especially for pages with many images.
+        <br />
+        Use the loading="eager" value if you want the image to load immediately, regardless of its position on the page.
+        <br />
+        Eager is the default behavior for images without a loading attribute, meaning they will load as soon as they are encountered in the HTML document.
+    </p>
+    
+</body>
+
+</html>

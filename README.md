@@ -25,6 +25,29 @@ The basic structure of an HTML document includes the following elements:
  </html>
  ```
 
+ ## Tags vs Attributes
+ In HTML, tags are used to define elements, while attributes provide additional information about those elements.
+ For example, in the `<a>` tag, `href` is an attribute that specifies the URL of the link:
+ ```html
+ <a href="https://www.example.com">Visit Example</a>
+ ```
+
+ Another example is the `<img>` tag, where `src` is an attribute that specifies the path to the image:
+ ```html
+ <img src="image.jpg" alt="Description of the image">
+ ```
+
+ ## Abolute vs Relative References
+ Absolute references specify the full URL of a resource, while relative references specify the path to a resource relative to the current document.
+ For example, an absolute reference to an image might look like this:
+ ```html
+ <img src="https://www.example.com/images/photo.jpg" alt="Photo">
+ ```
+ A relative reference to the same image might look like this:
+ ```html
+ <img src="images/photo.jpg" alt="Photo">
+ ```
+
  ## Explanation of the Structure & Elements
 
  Primary elements include:
@@ -78,7 +101,6 @@ Symbols (Entitys):
  <p>Emphasized text: <em>Emphasized</em></p>
  ```
 
-
  ## Browser Rendering
  When a user visits a website, the browser retrieves the HTML document and renders it on the screen. 
  This process involves parsing the HTML, applying CSS styles, and executing any JavaScript code to display the final web page to the user.
@@ -90,6 +112,13 @@ Symbols (Entitys):
  However, all HTML elements, including hidden ones and comments, can be viewed by inspecting the page source or using developer tools in the browser.
  Do not rely on HTML elements being hidden or invisible for security purposes, as they can still be accessed and viewed by users through inspection tools.
  HTML is rendered on the client side, meaning that it is processed and displayed by the user's browser so do not include sensitive information in the HTML code, as it can be easily accessed by users.
+
+ ## HTML Validation
+ HTML validation is the process of checking an HTML document against a set of rules and standards to ensure that it is well-formed and follows best practices.
+ Validating HTML can help identify and fix errors in the code, improve accessibility, and ensure that the web page is displayed correctly across different browsers and devices.
+ There are various tools available for validating HTML, such as the W3C Markup Validation Service, which checks the HTML code against the official HTML specifications and provides feedback on any errors or warnings found in the code.
+ 
+ To use, go to https://validator.w3.org/ to validate your HTML code.
 
  ## Language Comparison
 
