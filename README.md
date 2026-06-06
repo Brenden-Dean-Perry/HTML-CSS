@@ -18,6 +18,26 @@ However, there are certain elements, such as `<pre>`, that preserve white space.
 
 Even <p>Hello   world</p> will be rendered as "Hello world" in the browser, with only a single space between "Hello" and "world".
 
+ ## Language Comparison
+
+ ### HTML vs CSS
+ HTML is used to structure the content of a web page, while CSS (Cascading Style Sheets) is used to style and layout the content.
+ 
+ They work together to create visually appealing and well-structured web pages.
+ CSS applies styles to HTML elements, allowing developers to control the appearance of the web page, such as colors, fonts, and layout.
+
+ ### HTML vs JavaScript
+ HTML is used to structure the content of a web page, while JavaScript is a programming language that is used to add interactivity and dynamic behavior to web pages.
+
+ ### JavaScript vs TypeScript
+ JavaScript is a programming language that is commonly used for web development.
+ TypeScript is a superset of JavaScript that adds static typing and other features to the language.
+
+ TypeScript can help catch errors at compile time and improve code maintainability, while JavaScript is more flexible and widely supported across different environments.
+
+ Can be used together in a project, with TypeScript being transpiled to JavaScript for execution in the browser.
+ TypeScript cannot run directly in the browser, but it can be transpiled to JavaScript using tools like the TypeScript compiler (tsc) or Babel.
+
 ## Basics of web development
 Web development is the process of creating websites and web applications.
 
@@ -68,7 +88,7 @@ The basic structure of an HTML document includes the following elements:
  </html>
  ```
 
- ## Tags vs Attributes
+ ## Tags vs Attributes vs Element
  In HTML, tags are used to define elements, while attributes provide additional information about those elements.
  For example, in the `<a>` tag, `href` is an attribute that specifies the URL of the link:
  ```html
@@ -127,7 +147,6 @@ Symbols (Entitys):
  The index.html is the main entry point of the website. 
  It is the file that is loaded when a user visits the website.
 
-
  ## Terms
  Block-level elements: These elements typically start on a new line and take up the full width of their container. Examples include `<div>`, `<p>`, and `<h1>`.
  For example:
@@ -156,6 +175,104 @@ Symbols (Entitys):
  Do not rely on HTML elements being hidden or invisible for security purposes, as they can still be accessed and viewed by users through inspection tools.
  HTML is rendered on the client side, meaning that it is processed and displayed by the user's browser so do not include sensitive information in the HTML code, as it can be easily accessed by users.
 
+  ## CSS
+ To write CSS with an HTML document we need to add a style element <style>.
+
+Example:
+```html
+<style>
+  body {
+	background-color: lightblue;
+  }
+  h1 {
+	color: white;
+	text-align: center;
+  }
+  p {
+	font-family: verdana;
+	font-size: 20px;
+  }
+</style>
+```
+
+The first word in the CSS rule is called a selector, which specifies the HTML element to which the styles will be applied. 
+In the example above, `body`, `h1`, and `p` are selectors that target the `<body>`, `<h1>`, and `<p>` elements in the HTML document, respectively.
+
+Inside the brackets `{}`, we have a declaration block that contains one or more declarations. 
+Each declaration consists of a property and a value, separated by a colon `:`, and ends with a semicolon `;`.
+
+Example:
+```css
+body {
+  background-color: lightblue;
+  }
+```
+
+In this example, `background-color` is the property, and `lightblue` is the value.
+
+We can also write CSS in an external file and link it to the HTML document using the `<link>` element in the `<head>` section.
+Example:
+```html
+<link rel="stylesheet" href="styles.css">
+```
+
+In this example, `rel="stylesheet"` specifies that the linked file is a stylesheet, and `href="styles.css"` specifies the path to the CSS file.
+
+Instead of calling selectors by their tag name, we can also use classes and IDs to target specific elements in the HTML document.
+Example:
+```html
+<p class="my-class">This is a paragraph with a class.</p>
+<p id="my-id">This is a paragraph with an ID.</p>
+```
+
+In this example, we have added a class called `my-class` to the first paragraph and an ID called `my-id` to the second paragraph.
+We can then target these elements in our CSS using the class selector (.) and ID selector (#).
+Example:
+```css
+.my-class {
+  color: blue;
+  }
+  #my-id {
+  color: red;
+  }
+  ```
+
+
+  Helpful hints:
+	- Use classes when you want to apply the same styles to multiple elements, and use IDs when you want to target a specific element that is unique on the page.
+	- To make your CSS more efficient, try to avoid using overly specific selectors, as they can make it harder to maintain and update your styles in the future. Instead, use more general selectors and combine them with classes or IDs as needed.
+	- To make round buttons, you can use the `border-radius` property in CSS. For example, `border-radius: 50%;` will create a circular button, while `border-radius: 10px;` will create a button with rounded corners. Circular buttons are achievable by setting the border-radius to 50% the height and width of the button, while rounded corners can be achieved by setting a specific pixel value for the border-radius property. Which makes intutive sense becuase a radius of 50% mean the radius is half the size of the button, creating a perfect circle.
+	- There are multiple ways to change the size of elements in CSS, such as using the `width` and `height` properties, or using padding and margin to adjust the spacing around elements. Using padding and margin can be more flexible and responsive, as it allows you to adjust the spacing around the element content so you do not have to worry about the actual size of the element, which can be helpful when designing for different screen sizes and devices. However, using width and height can be more precise when you want to set specific dimensions for an element, such as a fixed-size image or button.
+
+### Pseudo-classes, Pseudo-elements, and Transitions
+
+To apply effects to elements when the user interacts with them, we can use pseudo-classes in CSS.
+
+For example, the `:hover` pseudo-class allows us to change the style of an element when the user hovers over it with their mouse.
+Example:
+```css
+button:hover {
+  background-color: lightgreen;
+  }
+ ```
+
+ In this example, when the user hovers over a button element, its background color will change to light green.
+
+ Transitions allow us to create smooth animations when the styles of an element change.
+ Example:
+ ```css
+ button {
+  background-color: lightblue;
+  transition: background-color 0.3s ease;
+  }
+  ```
+  In this example, when the background color of the button changes (such as on hover), it will transition smoothly over 0.3 seconds with an easing function of "ease".
+  We need to specify the property we want to transition (in this case, `background-color`), the duration of the transition (0.3 seconds), and the easing function (ease) to control the speed of the transition.
+
+  Transitions can be applied to various CSS properties, such as `color`, `width`, `height`, `opacity`, and more, allowing for a wide range of animation effects on web elements.
+  Transitions should always be set on the element's default state, not on the state that triggers the transition (like `:hover`), to ensure that the transition effect works correctly when the state changes.
+
+
  ## Validation
  ### HTML Validation
  HTML validation is the process of checking an HTML document against a set of rules and standards to ensure that it is well-formed and follows best practices.
@@ -167,23 +284,3 @@ Symbols (Entitys):
  ### CSS Validation
  
 CSS Valiation can be done at https://jigsaw.w3.org/css-validator/
- 
- ## Language Comparison
-
- ### HTML vs CSS
- HTML is used to structure the content of a web page, while CSS (Cascading Style Sheets) is used to style and layout the content.
- 
- They work together to create visually appealing and well-structured web pages.
- CSS applies styles to HTML elements, allowing developers to control the appearance of the web page, such as colors, fonts, and layout.
-
- ### HTML vs JavaScript
- HTML is used to structure the content of a web page, while JavaScript is a programming language that is used to add interactivity and dynamic behavior to web pages.
-
- ### JavaScript vs TypeScript
- JavaScript is a programming language that is commonly used for web development.
- TypeScript is a superset of JavaScript that adds static typing and other features to the language.
-
- TypeScript can help catch errors at compile time and improve code maintainability, while JavaScript is more flexible and widely supported across different environments.
-
- Can be used together in a project, with TypeScript being transpiled to JavaScript for execution in the browser.
- TypeScript cannot run directly in the browser, but it can be transpiled to JavaScript using tools like the TypeScript compiler (tsc) or Babel.

@@ -23,6 +23,38 @@
         .important{
             color: red
         }
+
+        .tweet-button {
+            color: white;
+            background-color: blue;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            height: 40px;
+            width: 100px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+            .tweet-button:hover {
+                background-color: lightblue;
+            }
+
+        .shadow-button {
+            color: white;
+            background-color: green;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            height: 40px;
+            width: 100px;
+            border-radius: 20px;
+            transition: box-shadow 0.3s ease;
+        }
+            .shadow-button:hover {
+                box-shadow: 0 10px 16px white;
+            }
     </style>
 
     <h1>HTML Styling</h1>
@@ -38,6 +70,13 @@
     <p class="important">
         This is important!
     </p>
+
+    <button class="tweet-button" onclick="alert('You clicked the button!')">Tweet</button>
+    <!--Defines a button element that triggers a JavaScript alert when clicked. -->
+
+    
+    <button class="shadow-button" onclick="alert('You clicked the button!')">Hover</button>
+    <!--Defines a button element that triggers a JavaScript alert when clicked. -->
 
 </body>
 </html>
