@@ -73,6 +73,15 @@ The DOM contains all the elements of the web page, such as headings, paragraphs,
 
 ## Basic Structure of an HTML Document
 The basic structure of an HTML document includes the following elements:
+ - `<!DOCTYPE html>`: This declaration defines the document type and version of HTML being used.
+- `<html>`: This is the root element of the HTML document that contains all other elements.
+- `<head>`: This section contains meta-information about the document, such as the title, character encoding, and links to external resources like CSS and JavaScript files.
+- `<body>`: This section contains the content of the web page that is displayed to the user, such as text, images, links, and other multimedia elements.
+
+The <HTML> <Head> <Body> are three the main elements of an HTML document, and they define the structure and content of the web page.
+
+The basic structure of an HTML document can be represented as follows:
+
 ```html
  <!DOCTYPE html>
  <html lang="en">
@@ -87,6 +96,10 @@ The basic structure of an HTML document includes the following elements:
    </body>
  </html>
  ```
+
+ Note: The `<!DOCTYPE html>` declaration is important as it tells the browser to render the page in standards mode, ensuring that the HTML is interpreted correctly.
+ The `<html lang="en">` attribute specifies the language of the document, which can help with accessibility and search engine optimization (SEO).
+ Initial-scale=1.0 in the viewport meta tag ensures that the page is displayed correctly on different devices, especially mobile devices.
 
  ## Tags vs Attributes vs Element
  In HTML, tags are used to define elements, while attributes provide additional information about those elements.
@@ -147,6 +160,16 @@ Symbols (Entitys):
  The index.html is the main entry point of the website. 
  It is the file that is loaded when a user visits the website.
 
+ ### Difference between block and inline elements
+ Important concept!
+ Block elements take up the full width of the page and start on a new line, while inline elements only take up as much width as necessary and do not start on a new line.
+
+ Examples of block elements include `<div>`, `<p>`, `<h1>`, and `<ul>`, while examples of inline elements include `<span>`, `<a>`, and `<strong>`.
+
+ However, it is important to note that some elements can be both block and inline depending on their context and the CSS styles applied to them.
+ For example, the `<a>` tag is typically an inline element, but it can be styled with CSS to behave like a block element if needed.
+ Alternatively, the `<div>` tag is typically a block element, but it can be styled with CSS to behave like an inline element if needed where it does not take up the full width of the page and does not start on a new line.
+
  ## Terms
  Block-level elements: These elements typically start on a new line and take up the full width of their container. Examples include `<div>`, `<p>`, and `<h1>`.
  For example:
@@ -163,6 +186,49 @@ Symbols (Entitys):
  <p>Emphasized text: <em>Emphasized</em></p>
  ```
 
+ ## Div vs Span
+ The `<div>` element is a block-level element that is used to group other elements together and apply styles or attributes to them. It is often used for layout purposes.
+ Div stands for "division" and is used to create sections or containers in a web page. 
+
+ Span, on the other hand, is an inline element that is used to group inline elements together and apply styles or attributes to them without affecting the layout of the document. 
+ It is often used for styling specific parts of text or other inline content.
+ For example, you might use a `<div>` to create a section of a web page, and then use `<span>` elements within that section to style specific words or phrases:
+ ```html
+ <div class="section">
+   <h2>Section Title</h2>
+   <p>This is a paragraph with a <span class="highlight">highlighted</span> word.</p>
+   </div>
+```
+
+Div and spans used to be used often for layout purposes, but with the advent of CSS and modern web design practices, they are now primarily used for styling and grouping content rather than for layout.
+Most modern web design relies on CSS for layout and styling, and the use of divs and spans is often limited to specific cases where they are needed for grouping or styling purposes.
+
+HTML5 introduced new semantic elements that provide more meaningful structure to web pages, such as `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, and `<footer>`. 
+These elements help improve the accessibility and SEO of web pages by providing clear indications of the different sections and their purposes.
+These semantic elements should be used instead of generic `<div>` elements whenever possible to enhance the structure and meaning of the content on a web page.
+
+But it's important to note that divs and spans are still widely used in web development, especially for cases where specific styling or grouping is needed that cannot be achieved with semantic elements alone.
+
+## Nested layout technique
+The nested layout technique is a method of structuring HTML documents by nesting elements within each other to create a hierarchical layout.
+This technique allows developers to create complex layouts and organize content in a way that is both visually appealing and semantically meaningful.
+
+Layouts can be horizontal or vertical. These can be combined to create more complex layouts. 
+For example, a common layout is a header at the top, a sidebar on the left, and main content in the center.
+You can build any layout you want by nesting elements within each other and applying CSS styles to them.
+
+## Advanced CSS Layouts
+The two most common advanced CSS layout techniques are Flexbox and Grid.
+- Grid is a two-dimensional layout system that allows you to create complex layouts with rows and columns. It is particularly useful for creating grid-based designs, such as photo galleries or product listings.
+- Flexbox, on the other hand, is a one-dimensional layout system that allows you to create flexible and responsive layouts. It is particularly useful for creating layouts that need to adapt to different screen sizes, such as navigation menus or card layouts.
+
+When using Flexbox, you can control the direction of the layout using the `flex-direction` property. 
+Other common properties include `justify-content`, which controls the alignment of items along the main axis, and `align-items`, which controls the alignment of items along the cross axis.
+
+Setting flex=1 on a child element of a flex container will make that element grow to fill the available space in the container.
+
+Example of a flex container with flex-direction set to row and column-reverse:
+
  ## Browser Rendering
  When a user visits a website, the browser retrieves the HTML document and renders it on the screen. 
  This process involves parsing the HTML, applying CSS styles, and executing any JavaScript code to display the final web page to the user.
@@ -178,8 +244,11 @@ Symbols (Entitys):
   ## CSS
  To write CSS with an HTML document we need to add a style element <style>.
 
+ Note: style elements should be placed within the head section of the HTML document to ensure that the styles are applied correctly when the page loads.
+
 Example:
 ```html
+<head>
 <style>
   body {
 	background-color: lightblue;
@@ -193,6 +262,7 @@ Example:
 	font-size: 20px;
   }
 </style>
+</head>
 ```
 
 The first word in the CSS rule is called a selector, which specifies the HTML element to which the styles will be applied. 
@@ -237,12 +307,41 @@ Example:
   }
   ```
 
-
   Helpful hints:
 	- Use classes when you want to apply the same styles to multiple elements, and use IDs when you want to target a specific element that is unique on the page.
 	- To make your CSS more efficient, try to avoid using overly specific selectors, as they can make it harder to maintain and update your styles in the future. Instead, use more general selectors and combine them with classes or IDs as needed.
 	- To make round buttons, you can use the `border-radius` property in CSS. For example, `border-radius: 50%;` will create a circular button, while `border-radius: 10px;` will create a button with rounded corners. Circular buttons are achievable by setting the border-radius to 50% the height and width of the button, while rounded corners can be achieved by setting a specific pixel value for the border-radius property. Which makes intutive sense becuase a radius of 50% mean the radius is half the size of the button, creating a perfect circle.
-	- There are multiple ways to change the size of elements in CSS, such as using the `width` and `height` properties, or using padding and margin to adjust the spacing around elements. Using padding and margin can be more flexible and responsive, as it allows you to adjust the spacing around the element content so you do not have to worry about the actual size of the element, which can be helpful when designing for different screen sizes and devices. However, using width and height can be more precise when you want to set specific dimensions for an element, such as a fixed-size image or button.
+	- There are multiple ways to change the size of elements in CSS, such as using the `width` and `height` properties, or using padding and margin to adjust the spacing around elements. Using padding and margin can be more flexible and responsive, as it allows you to adjust the spacing around the element content so you do not have to worry about the actual size of the element, which can be helpful when designing for different screen sizes and devices. However, using width and height can be more precise when you want to set specific dimensions for an element, such as a fixed-size image or button. See box model below for more information.
+	- Vertical-align is used to align inline elements vertically within a line of text. It can be used to align text, images, or other inline elements to the top, middle, or bottom of the line. For example, `vertical-align: middle;` will align the element to the middle of the line, while `vertical-align: top;` will align it to the top of the line. This property is particularly useful when you want to align images or icons with text in a visually appealing way.
+
+### Box Model
+
+The box model is a fundamental concept in CSS that describes how elements are structured and how they interact with each other on a web page.
+
+The box model consists of four main components:
+1. Content: This is the innermost part of the box, where the actual content of the element is displayed (e.g., text, images).
+2. Padding: This is the space between the content and the border of the element. It can be used to create space around the content within the element.
+3. Border: This is the line that surrounds the padding and content of the element. It can be styled with different colors, widths, and patterns.
+4. Margin: This is the outermost part of the box, which creates space between the element and other elements on the page. It can be used to create separation between elements and control the layout of the page.
+
+The box model is important to understand because it affects how elements are sized and positioned on a web page. 
+When you set the width and height of an element, you are actually setting the size of the content area, and the padding, border, and margin will be added to that size to determine the total size of the element on the page.
+
+Since HTML ignores whitespace, you can use the box model to create space between elements without relying on extra spaces in the HTML code.
+For example, if you want to create space between two paragraphs, you can use the margin property in CSS to add space around the paragraphs instead of adding extra spaces in the HTML code.
+```css
+p {
+  margin-bottom: 20px; /* Adds space below each paragraph */
+}
+```
+This will create a 20px space below each paragraph, making the layout cleaner and more consistent across different browsers and devices.
+
+Alternatively, you can use padding with a span element to create space within an element without affecting the overall layout of the page.
+```html
+<p>This is a paragraph with <span style="padding: 10px;">extra space</span> around the text.</p>
+```
+In this example, the span element has a padding of 10px, which creates extra space around the text "extra space" without affecting the layout of the entire paragraph. 
+This can be useful for creating visual separation or emphasis within a block of text.
 
 ### Pseudo-classes, Pseudo-elements, and Transitions
 

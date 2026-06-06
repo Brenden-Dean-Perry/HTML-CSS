@@ -10,55 +10,62 @@
     <title>
         HTML Demo Project
     </title> <!--Sets the title of the HTML document, which appears in the browser tab. -->
+    <!--Defines the style for all p elements in the document. -->
+<!--Defines a paragraph element with the class 'important' and applies specific styles to it. -->
+<style>
+    
+    p { 
+        border: dotted
+    }
+    .important{
+        color: red
+    }
+
+    .tweet-button {
+        color: white;
+        background-color: blue;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        height: 40px;
+        width: 100px;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+    }
+        .tweet-button:hover {
+            background-color: lightblue;
+        }
+
+    .shadow-button {
+        color: white;
+        background-color: green;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        height: 40px;
+        width: 100px;
+        border-radius: 20px;
+        transition: box-shadow 0.3s ease;
+    }
+        .shadow-button:hover {
+            box-shadow: 0 10px 16px red;
+        }
+
+        .grid-container-custom{
+            display: grid;
+            grid-template-columns: 50px 2fr 1fr;
+            column-gap: 16px;
+            row-gap:16px;
+        }
+    
+</style>
 </head>
 
 <body>
-    <!--Defines the style for all p elements in the document. -->
-    <!--Defines a paragraph element with the class 'important' and applies specific styles to it. -->
-    <style>
-        
-        p { 
-            border: dotted
-        }
-        .important{
-            color: red
-        }
-
-        .tweet-button {
-            color: white;
-            background-color: blue;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            height: 40px;
-            width: 100px;
-            border-radius: 20px;
-            transition: background-color 0.3s ease;
-        }
-            .tweet-button:hover {
-                background-color: lightblue;
-            }
-
-        .shadow-button {
-            color: white;
-            background-color: green;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            height: 40px;
-            width: 100px;
-            border-radius: 20px;
-            transition: box-shadow 0.3s ease;
-        }
-            .shadow-button:hover {
-                box-shadow: 0 10px 16px white;
-            }
-    </style>
-
     <h1>HTML Styling</h1>
-
+    <h2>Text Styling Examples</h2>
     <p>
         The style tags enables us to write file-specific CSS directly within the HTML document.
     </p>
@@ -71,12 +78,87 @@
         This is important!
     </p>
 
+    <hr />
+    <h2>Button Examples with CSS Styling</h2>
+
     <button class="tweet-button" onclick="alert('You clicked the button!')">Tweet</button>
     <!--Defines a button element that triggers a JavaScript alert when clicked. -->
 
     
     <button class="shadow-button" onclick="alert('You clicked the button!')">Hover</button>
     <!--Defines a button element that triggers a JavaScript alert when clicked. -->
+
+    <br>
+    <hr>
+    
+    <h2>Layout Examples</h2>
+
+    <p>
+        Below are examples of different layout techniques using CSS Flexbox and Grid.
+
+        Grids allow us to create complex layouts by defining rows and columns, while Flexbox is great layouts that required flexibility and responsiveness.
+
+        Grids are defined using the display: grid property, and we can specify the number of columns and rows using grid-template-columns and grid-template-rows properties. We can also control the spacing between grid items using column-gap and row-gap properties.
+        Flexbox is a one-dimensional layout system that arranges items in a row or column, while Grid is a two-dimensional layout system that allows for more complex arrangements of items in both rows and columns.
+    </p>
+
+     <!--Defines a grid layout with three columns of specified widths.
+    The first column is 100px wide, the second column takes up the remaining space (1fr), and the third column is 2fr wide.
+    Fractions (fr) are a unit of measurement in CSS Grid that represent a portion of the available space in the grid container. 
+    You can think of 1fr as one part of the available space, 2fr as two parts, and so on.-->
+
+    <!--Note that the gap property is used to create a 10px space between the grid items.
+        Also, if you want to use the same styles for multiple elements, it's better to define a CSS class and apply it to those elements instead of using inline styles. This promotes reusability and keeps your HTML cleaner.-->
+
+    <h3>Basic Grid Example</h3>
+    <div class="grid-container" 
+        style="display: grid; 
+        grid-template-columns: 100px 2fr 1fr;
+        gap: 10px;
+        height: 200px;">
+        <div class="grid-item" style="background-color: violet;">1</div>
+        <div class="grid-item" style="background-color: blue;">2</div>
+        <div class="grid-item" style="background-color: purple;">3</div>
+        <div class="grid-item" style="background-color: red;">4</div>
+        <div class="grid-item" style="background-color: teal;">5</div>
+        <div class="grid-item" style="background-color: orange">6</div>
+    </div>
+
+    <h3>CSS Grid Styled Example</h3>
+    <div class="grid-container-custom">
+        <div class="grid-item" style="background-color: lightcoral;">1</div>
+        <div class="grid-item" style="background-color: black;">2</div>
+        <div class="grid-item" style="background-color: mediumvioletred;">3</div>
+        <div class="grid-item" style="background-color: blue;">4</div>
+        <div class="grid-item" style="background-color: orchid;">5</div>
+        <div class="grid-item" style="background-color: forestgreen">6</div>
+        </div>
+
+    <h2>Flexbox Layout</h2>
+    <h3>Row Flexbox Example</h3>
+
+    <div class="flex-container"
+        style="display: flex; flex-direction: row; gap: 10px;">
+        <div class="flex-item" style="background-color: lightcoral;">1</div>
+        <div class="flex-item" style="background-color: black;">2</div>
+        <div class="flex-item" style="background-color: mediumvioletred;">3</div>
+        <div class="flex-item" style="background-color: blue;">4</div>
+        <div class="flex-item" style="background-color: orchid;">5</div>
+        <div class="flex-item" style="background-color: forestgreen">6</div>
+    </div>
+
+    <br />
+
+    <h3>Column-Reverse Flexbox Example</h3>
+    <div class="flex-container"
+        style="display: flex; flex-direction: column-reverse; gap: 10px;">
+        <div class="flex-item" style="background-color: lightcoral;">1</div>
+        <div class="flex-item" style="background-color: black;">2</div>
+        <div class="flex-item" style="background-color: mediumvioletred;">3</div>
+        <div class="flex-item" style="background-color: blue;">4</div>
+        <div class="flex-item" style="background-color: orchid;">5</div>
+        <div class="flex-item" style="background-color: forestgreen">6</div>
+    </div>
 
 </body>
 </html>
