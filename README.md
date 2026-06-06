@@ -9,6 +9,48 @@ HTML adds the building blocks of a web page, such as text, images, links, and ot
 HTML describes the structure of a web page using a series of elements and tags.
 For example, the `<p>` tag is used to define a paragraph, while the `<a>` tag is used to create a hyperlink.
 
+HTML is not a programming language, but rather a markup language that provides the structure and content of a web page. 
+
+It is not a case-sensitive language, meaning that tags can be written in uppercase or lowercase. 
+However, it is a common convention to write tags in lowercase for consistency and readability.
+White space in HTML is generally ignored, meaning that multiple spaces, tabs, and line breaks are treated as a single space. 
+However, there are certain elements, such as `<pre>`, that preserve white space.
+
+Even <p>Hello   world</p> will be rendered as "Hello world" in the browser, with only a single space between "Hello" and "world".
+
+## Basics of web development
+Web development is the process of creating websites and web applications.
+
+To create a web page, you need to use a combination of HTML, CSS, and JavaScript.
+- HTML is used to structure the content of the web page.
+- CSS is used to style the web page, such as changing colors, fonts, and layout.
+- JavaScript is used to add interactivity to the web page, such as handling user input and creating dynamic content.
+
+When you navigate to a web page, your browser sends a request to the server, which then responds with the HTML, CSS, and JavaScript files needed to render the page. 
+The browser then processes these files and displays the web page to the user.
+
+URL stands for Uniform Resource Locator.
+
+Resource refers to any item that can be accessed on the web, such as a web page, an image, a video, fonts, or a file.
+
+It is the address used to access a web page on the internet.
+A URL typically consists of several parts:
+- Protocol: This specifies the method used to access the resource, such as `http` or `https`. The `https` protocol is more secure than `http` because it encrypts the data transmitted between the browser and the server. HTTP stands for HyperText Transfer Protocol, while HTTPS stands for HyperText Transfer Protocol Secure.
+- Domain: This is the unique name that identifies the website, such as `www.example.com`.
+- Path: This specifies the specific page or resource being accessed, such as `/about` or `/contact`.
+- Query Parameters: These are optional parameters that can be added to the URL to provide additional information, such as `?id=123` or `?search=html`.
+- Fragment: This is an optional part of the URL that specifies a specific section of the page, such as `#section1` or `#top`.
+- Port: This is an optional part of the URL that specifies the port number used to access the resource, such as `:80` for HTTP or `:443` for HTTPS.
+- Username and Password: These are optional parts of the URL that can be used for authentication, such as `username:password@` before the domain name.
+- Subdomain: This is an optional part of the URL that can be used to specify a subdomain, such as `blog.example.com` or `shop.example.com`.
+- Top-Level Domain (TLD): This is the last part of the domain name, such as `.com`, `.org`, or `.net`.
+- IP Address: Instead of a domain name, a URL can also use an IP address to access a resource, such as `http://192.168.1.1`.
+
+### The Document Object Model (DOM)
+When a browser receives an HTTP document, it parses the HTML content, creates a Document Object Model (DOM) tree, and then renders the page based on the structure defined by the HTML.
+The browser also applies CSS styles to the elements in the DOM tree and executes any JavaScript code included in the HTML document to create an interactive web page.
+The DOM contains all the elements of the web page, such as headings, paragraphs, images, links, and other multimedia content.
+
 ## Basic Structure of an HTML Document
 The basic structure of an HTML document includes the following elements:
 ```html
@@ -114,13 +156,18 @@ Symbols (Entitys):
  Do not rely on HTML elements being hidden or invisible for security purposes, as they can still be accessed and viewed by users through inspection tools.
  HTML is rendered on the client side, meaning that it is processed and displayed by the user's browser so do not include sensitive information in the HTML code, as it can be easily accessed by users.
 
- ## HTML Validation
+ ## Validation
+ ### HTML Validation
  HTML validation is the process of checking an HTML document against a set of rules and standards to ensure that it is well-formed and follows best practices.
  Validating HTML can help identify and fix errors in the code, improve accessibility, and ensure that the web page is displayed correctly across different browsers and devices.
  There are various tools available for validating HTML, such as the W3C Markup Validation Service, which checks the HTML code against the official HTML specifications and provides feedback on any errors or warnings found in the code.
  
  To use, go to https://validator.w3.org/ to validate your HTML code.
 
+ ### CSS Validation
+ 
+CSS Valiation can be done at https://jigsaw.w3.org/css-validator/
+ 
  ## Language Comparison
 
  ### HTML vs CSS
