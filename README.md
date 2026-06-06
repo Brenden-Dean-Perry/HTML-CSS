@@ -1,5 +1,5 @@
-# HTML
-A demo repo to document and cover HTML concepts and examples.
+# HTML-CSS
+A demo repo to document and cover HTML & CSS concepts and examples.
 
 ## Overview
 HTML stands for HyperText Markup Language. 
