@@ -225,7 +225,8 @@ The two most common advanced CSS layout techniques are Flexbox and Grid.
 When using Flexbox, you can control the direction of the layout using the `flex-direction` property. 
 Other common properties include `justify-content`, which controls the alignment of items along the main axis, and `align-items`, which controls the alignment of items along the cross axis.
 
-Setting flex=1 on a child element of a flex container will make that element grow to fill the available space in the container.
+Setting flex=1 on a child element of a flex container will make that element grow to fill the available space in the container. This is because the `flex` property is a shorthand for `flex-grow`, `flex-shrink`, and `flex-basis`. 
+When you set `flex: 1`, it means that the element should grow to fill any available space in the container, while also allowing it to shrink if necessary and setting its initial size to 0.
 
 Example of a flex container with flex-direction set to row and column-reverse:
 
@@ -306,6 +307,23 @@ Example:
   color: red;
   }
   ```
+
+  You can also target element attributes. 
+  For example, you can target all `<a>` elements with a specific `href` attribute value:
+  ```css
+  a[href="https://www.example.com"] {
+  color: green;
+  }
+  ```
+  This will apply the specified styles to all `<a>` elements that have an `href` attribute with the value "https://www.example.com".
+
+  You can also target specific parts of an element using pseudo-elements in CSS.
+  ```css
+  .input::placeholder {
+  color: gray;
+  }
+  ```
+  This example targets the placeholder text of input elements with the class `input` and sets the color to gray.
 
   Helpful hints:
 	- Use classes when you want to apply the same styles to multiple elements, and use IDs when you want to target a specific element that is unique on the page.
