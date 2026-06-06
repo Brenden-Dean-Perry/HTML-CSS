@@ -1,0 +1,89 @@
+<!DOCTYPE HTML> <!--Declares the document type and version of HTML -->
+<html lang="en"> <!--Declares the language of the HTML document and established the root element. -->
+
+<head>
+    <meta charset="UTF-8"> <!--Declares the character encoding for the HTML document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a HTML demo project to showcase basic HTML structure and styling.">
+    <link rel="icon" href="img\example.png" type="image/x-icon"> <!--Links an icon to be displayed in the browser tab -->
+    <link rel="stylesheet" href="main.css"> <!--Linking an external CSS file to style the HTML document. -->
+    <title>HTML Demo Project</title> <!--Sets the title of the HTML document, which appears in the browser tab. -->
+</head>
+
+<body>
+    <header>
+        <h1>This is an h1 tag within the header element</h1>
+        <!--Main heading of the webpage -->
+        <nav aria-label="Main navigation"> <!--Navigation element with an aria-label for accessibility to label the navigation region -->
+            <ul>
+                <li><a href="#section1">Section 1</a></li>
+                <!--Navigation link to Section 1 -->
+                <li><a href="#section2">Section 2</a></li>
+                <!--Navigation link to Section 2 -->
+                <li><a href="#section3">Section 3</a></li>
+                <!--Navigation link to Section 3 -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="section1">
+            <h2>This is the start of the main content...</h2>
+            <h2>Section 1: Introduction</h2>
+            <!--Subheading for Section 1 -->
+            <p>This section provides an introduction to the HTML demo project. It covers the basic structure of an HTML document and its components.</p>
+        </section>
+        <section id="section2">
+            <h2>Section 2: Features</h2>
+            <!--Subheading for Section 2 -->
+            <p>This section highlights the features of the HTML demo project, including semantic elements, responsive design, and accessibility considerations.</p>
+        </section>
+        <section id="section3">
+            <h2>Section 3: Conclusion</h2>
+            <!--Subheading for Section 3 -->
+            <p>This section concludes the HTML demo project by summarizing the key points and providing resources for further learning.</p>
+        </section>
+
+        <hr>
+        <!--Horizontal rule to separate content. These can be still used for visual separation but they offer no semantic meaning or structure so they are not recommended for structuring content. -->
+
+        <section id="article-vs-section">
+        <h2>Article vs Section <code>&lt;article&gt; & &lt;section&gt;</code></h2>
+        <p>
+            Article and Section are both semantic elements in HTML, but they serve different purposes. 
+            <br />
+            An Article is a self-contained piece of content that can be distributed independently, such as a blog post or news article. 
+            A Section, on the other hand, is a thematic grouping of content within a document, such as a chapter or a section of a webpage. 
+            While an Article can contain multiple Sections, a Section cannot contain an Article.
+        </p>
+            <aside>
+                <header>
+                    <h3>Aside <code>&lt;aside&gt;</code></h3>
+                </header>
+                <p>An aside is a section of content that is tangentially related to the content around it. It is often used for sidebars, pull quotes, or other content that is not essential to the main content but provides additional information or context. In this case, the aside is providing additional information about the difference between Article and Section elements in HTML.</p>
+                <h3>Semantic Metadata</h3>
+                <p>Semantic metadata provides additional information about the content, helping search engines and assistive technologies understand the context and meaning of the content. For example:</p>
+                <p>At 8am I leave for work.</p>
+                <p>At <time datetime="08:00">8am</time> I leave for work.
+            </aside>
+        </section>
+
+        <section>
+            <h2>Span and Div <code>&lt;span&gt; & &lt;div&gt;</code></h2>
+            <p>The <code>&lt;span&gt;</code> element is an inline container used to mark up a part of a text, or a part of a document. 
+                The <code>&lt;div&gt;</code> element is a block-level container used to group elements for styling or scripting purposes.
+                <br /> 
+                <br />
+                These use to be the only way to group elements before semantic elements were introduced, but now they are typically used for styling or scripting purposes rather than for structuring content.
+                In fact, we should avoid using <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> for structuring content, as it can make the HTML document less semantic and harder to understand for both humans and machines.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>This is the footer content.</p>
+        <p>&copy; 2026 HTML Demo Project. All rights reserved.</p>
+        <!--Footer content with copyright information -->
+    </footer>
+</body>
+</html>

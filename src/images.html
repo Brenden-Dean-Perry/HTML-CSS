@@ -17,12 +17,12 @@
     <hr />
 
     <h2>Example of an Image Element</h2>
-    <p>Below is an example of how to use the &lt;img&gt; element:</p>
-    <img src="img/balance.jpg" alt="Balance Image" width="300" height="200" title="Balance Image Tooltip example" loading="lazy"> 
+    <p>Below is an example of how to use the <code>&lt;img&gt;</code> element:</p>
+    <img src="img/ocean.jpg" alt="Ocean Image" width="275" height="183" title="Ocean Image Tooltip example" loading="lazy"> 
     <!--alt attribute provides alternative text for the image, which is important for accessibility and SEO.-->
     <!--width and height attributes specify the dimensions of the image are optional but recommended nowaways to ensure proper layout and performance. Enables cumulative layout shift (CLS)-->
     <p>
-        In this example, the image is sourced from "img/balance.jpg", and it has an alternative text of "Balance Image". 
+        In this example, the image is sourced from "img/ocean.jpg", and it has an alternative text of "Ocean Image". 
         The width and height attributes specify the dimensions of the image. 
         The title attribute provides additional information about the image, which is displayed as a tooltip when the user hovers over the image. 
         The alt attribute is crucial for accessibility, as it allows screen readers to describe the image to visually impaired users. 
@@ -40,6 +40,15 @@
         <br />
         Eager is the default behavior for images without a loading attribute, meaning they will load as soon as they are encountered in the HTML document.
     </p>
+
+    <hr />
+    <h2>Using Figure Tag (<code>&lt;figure&gt;&lt;img&gt;&lt;figcaption&gt;&lt;/figure&gt;</code>)</h2>
+
+
+    <figure>
+        <img src="img/sunset.jpg" alt="Sunset image" width="612" height="408" title="Sunset Image Tooltip example" loading="lazy" />
+        <figcaption>This is a description of the image encapsolated in the figure tag. This improves discoverablity and accessibility for browsers. It is better to link captions of images directly to the image with the figure encpasulation.</figcaption>
+    </figure>
     
 </body>
 

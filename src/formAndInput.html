@@ -1,0 +1,145 @@
+<!DOCTYPE HTML> <!--Declares the document type and version of HTML -->
+<html lang="en"> <!--Declares the language of the HTML document and established the root element. -->
+
+<head>
+    <meta charset="UTF-8"> <!--Declares the character encoding for the HTML document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a HTML demo project to showcase basic HTML structure and styling.">
+    <link rel="icon" href="img\example.png" type="image/x-icon"> <!--Links an icon to be displayed in the browser tab -->
+    <link rel="stylesheet" href="main.css"> <!--Linking an external CSS file to style the HTML document. -->
+    <title>HTML Demo Project</title> <!--Sets the title of the HTML document, which appears in the browser tab. -->
+</head>
+
+<body>
+    <h1>Form and Input Elements</h1>
+    <p>This section demonstrates various form and input elements in HTML.</p>
+    <article>
+       <h2>Form Example</h2>
+        <form action="https://httpbin.org/get" method="get"> <!-- Put or post method is used to send form data to the server. -->
+            <p>
+                <label for="name">Name:</label>
+                <!--Label element is used to define a label for an input element. -->
+                <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="on" required autofocus>
+                <!--Input element is used to create interactive controls for web-based forms. -->   
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </p>
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </p>
+            <p>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="0" max="120" placeholder="Age">
+            </p>
+            <p>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" title="Enter your phone number in the format 555-555-5555" name="phone" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            </p>
+
+            <p>
+                <label for="selection">Select an option:</label>
+                <select id="selection" name="selection" required>
+                    <option value="">--Please choose an option--</option>
+                    <optgroup label="Group 1">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                    </optgroup>
+                    <optgroup label="Group 2">
+                        <option value="option3">Option 3</option>
+                        <option value="option4">Option 4</option>
+                    </optgroup>
+                </select>
+            </p>
+
+             <p>
+     <label for="selection_with_size">Select an option:</label>
+     <select id="selection_with_size" name="selection_with_size" multiple size="4" required>
+         <option value="">--Please choose an option--</option>
+             <option value="option1">Option 1</option>
+             <option value="option2">Option 2</option>
+             <option value="option3">Option 3</option>
+             <option value="option4">Option 4</option>
+     </select>
+ </p>
+
+            <p>
+                <label for="datalist">Data list example:</label>
+                <input list="dataoption_list" id="datalist" name="datalist" placeholder="Choose an option">
+                <datalist id="dataoption_list">
+                    <option value="Option 1">
+                    <option value="Option 2">
+                    <option value="Test">
+                    <option value="Tester">
+                </datalist>
+            </p>
+
+            <p>
+                <label for="file">Select a file:</label><br>
+                <input type="file" id="file" name="file">
+            </p>
+
+            <p>
+                <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                <label for="subscribe">Subscribe to newsletter</label>
+            </p>
+
+            <p>
+                Radio buttons must have the same name attribute to be grouped/linked together.
+                <br>
+                <input type="radio" id="option1" name="options" value="option1">
+                <label for="option1">Option 1</label>
+                <input type="radio" id="option2" name="options" value="option2">
+                <label for="option2">Option 2</label>
+                <input type="radio" id="option3" name="options" value="option3">
+                <label for="option3">Option 3</label>
+            </p>
+
+            <p>
+                <label>Enter your text:</label>
+                <textarea id="textarea" name="textarea" rows="4" cols="50" placeholder="Type your text here..."></textarea>
+            </p>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+        
+
+     
+    </article>
+
+        <br>
+        <br>
+        <h2>Form with semantic elements</h2>
+
+    <form action="https://httpbin.org/get" method="get">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <p>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="First Name" required>
+            </p>
+            <p>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Contact Information</legend>
+            <p>
+                <label for="email2">Email:</label>
+                <input type="email" id="email2" name="email2" placeholder="Email" required>
+            </p>
+            <p>
+                <label for="phone2">Phone:</label>
+                <input type="tel" id="phone2" name="phone2" placeholder="555-555-5555" title="Enter a valid phone number in the format 555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            </p>
+        </fieldset>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+</body>
+</html>
