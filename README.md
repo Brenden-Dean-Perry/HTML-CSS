@@ -389,6 +389,35 @@ button:hover {
   Transitions can be applied to various CSS properties, such as `color`, `width`, `height`, `opacity`, and more, allowing for a wide range of animation effects on web elements.
   Transitions should always be set on the element's default state, not on the state that triggers the transition (like `:hover`), to ensure that the transition effect works correctly when the state changes.
 
+  ## Scriping
+  Using the `<script>` tag, we can include JavaScript code in our HTML document to add interactivity and dynamic behavior to our web pages.
+  For example, we can use JavaScript to create a simple alert message when a button is clicked:
+  ```html
+  <button onclick="alert('Button clicked!')">Click me</button>
+  ```
+
+  Alternatively, we can include an external JavaScript file using the `src` attribute of the `<script>` tag:
+  ```html
+  <script src="script.js"></script>
+  ```
+  This will load the JavaScript code from the `script.js` file and execute it when the page loads.
+
+  Or we can write JavaScript code directly within the `<script>` tag:
+  ```html
+  <script>
+  function showAlert() {
+	alert('Hello, World!');
+  }
+  </script>
+  <button onclick="showAlert()">Click me</button>
+  ```
+
+  Generally, it's best practice to place the `<script>` tag just before the closing `</body>` tag to ensure that the HTML content is fully loaded before the JavaScript code runs. This helps prevent issues with accessing DOM elements that may not yet be available when the script executes.
+
+  This project is not intended to cover JavaScript in depth, but it is important to understand how to include and use JavaScript in your HTML documents to create interactive and dynamic web pages.
+
+  For more JavaScript resources, you can check out the following:
+  https://github.com/Brenden-Dean-Perry/JavaScript
 
  ## Validation
  ### HTML Validation
