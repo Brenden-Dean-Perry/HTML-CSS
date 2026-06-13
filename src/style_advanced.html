@@ -10,7 +10,21 @@
     <title>HTML Demo Project</title> <!--Sets the title of the HTML document, which appears in the browser tab. -->
 </head>
 
-<body>
+<body style="height:1000px; padding-left: 100px; padding-top: 100px;">
+
+    <div id="header" style="background-color: black; height: 100px; position: fixed; top: 0; right: 0; left: 0; border-bottom: 1px solid white;">
+        Header with fixed position
+    </div>
+
+    <div id="sidebar" style="background-color: lightblue; width: 100px; position: fixed; top: 100px; left: 0; bottom: 0; border-right: 1px solid white;">
+        Sidebar with fixed position
+    </div>
+
+    <div id="content">
+        <p>
+            This is a div with static position. It will be positioned according to the normal flow of the document, which means it will be placed below the fixed header and to the right of the fixed sidebar.
+        </p>
+    </div>
 
 </body>
 </html>

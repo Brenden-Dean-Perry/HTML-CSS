@@ -174,11 +174,54 @@
     <p>
         Elements with a static position are positioned according to the normal flow of the document. They are not affected by the top, bottom, left, or right properties.
     </p>
+    <div style="background-color: lightblue; width: 200px; height: 100px; position: static;">
+        div with static position
+    </div>
 
     <h3>Fixed Position</h3>
     <p>
         Elements with a fixed position are positioned relative to the viewport, which means they stay in the same place even when the page is scrolled. You can use the top, bottom, left, and right properties to specify the exact position of the element.
     </p>
+      <div style="background-color: black; width: 200px; height: 100px; position: fixed; top: 0; right: 0;">
+      div with fixed position
+     </div>
+    <h3>Absolute Position</h3>
+    <p>
+        Absolute position elements are similar to fixed position elements. However, fixed elements are fixed to the browser window, while absolute elements are abosulte to the page.
+        This means that absolute elements will scroll with the page, while fixed elements will remain in the same position on the screen regardless of scrolling.
+        Absolute elements are positioned relative to their nearest positioned ancestor (an element with a position other than static), or if there is no such ancestor, they are positioned relative to the initial containing block (the html element).
+    </p>
+    <p>
+        Placing an absolute element inside a relative element allows you to position the absolute element relative to the boundaries of the relative element.
+        This is a common technique for creating complex layouts and controlling the positioning of elements on a web page.
+        For example, if you have a div with position: relative and an absolute element inside it, you can use the top, bottom, left, and right properties to position the absolute element within the boundaries of the relative div.
+    </p>
+    <div style="background-color: lightgreen; width: 200px; height: 100px; position: absolute; bottom: 50px; right: 50px;">
+        div with absolute position
+    </div>
+    <h3>Relative Position</h3>
+    <p>
+        Relative position elements are positioned relative to their normal position in the document flow. You can use the top, bottom, left, and right properties to specify how much the element should be offset from its normal position.
+        When you set an element's position to relative, it remains in the normal document flow, and other elements will still be positioned as if the relatively positioned element were in its original position.
 
+        When you place an absolute element inside a relative element, the absolute element is positioned relative to the boundaries of the relative element.
+        This allows you to control the positioning of the absolute element within the context of the relative element, which can be useful for creating complex layouts and ensuring that elements are positioned correctly on the page.
+    </p>
+    <div style="background-color: lightcoral; width: 800px; height: 200px; position: relative;">
+        div with relative position
+        <div style="background-color: blue; width: 300px; height: 100px; position: absolute; top: 25px; left: 50px;">
+            absolute element inside relative element
+        </div>
+    </div>
+    <h3>Z-Index</h3>
+    <p>
+        By default, elements are stacked in the order they appear in the HTML document, with later elements appearing on top of earlier ones. 
+        However, by using the z-index property, you can change this stacking order and specify which elements should appear in front of or behind others.
+        
+        Z-index is a CSS property that controls the stacking order of elements on a web page.
+        It determines which elements appear in front of or behind other elements when they overlap. 
+        The z-index property only works on positioned elements (those with a position value of relative, absolute, fixed, or sticky).
+        For example, a div with a z-index of 2 will appear in front of a div with a z-index of 1, and a div with a z-index of 0 will appear behind both of them.
+    </p>
 </body>
 </html>
